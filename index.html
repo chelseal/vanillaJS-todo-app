@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VanillaJS todo app</title>
+    <!-- connects stylesheet -->
+    <link rel="stylesheet" href="styles.css"/>
+    <!-- connects google font api -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,300&display=swap"/>
+    <!-- connects font awesome icons via cloudflare -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+</head>
+<body class="container">
+    <div class="main">
+        <form>
+            <!-- user enters task description -->
+            <input type="text" placeholder="Add your todo here, press enter or plus icon">
+            <!-- user submits task with button or presses enter-->
+            <button type="submit"><i class="fas fa-plus-square"></i></button>
+        </form>
+        <!-- editable output the list of tasks -->
+        <div class="todoList">
+            <!-- todo items are added programmatically with <li> tag inside <ul> tag -->
+            <ul>
+            </ul>
+            <a class="clearAll" id="clearAll">Clear All</a>
+        </div>
+        <!-- todo items which are checked with the check icon are moved here -->
+        <div class="archivedTodos">
+            <!-- todo items are added programmatically with <li> tag inside <ol> tag -->
+            <p>When checked, archived todos go here</p>
+            <ol>
+            </ol>
+        </div>
+        <button type="button" name="projectLearnings" onclick="showProjectLearnings()">Project learnings</button>
+        <div id="learnings">
+            <p>
+                1. To iterate on a HTMLCollection or NodeList, create a shallow copy using Array.from(referenceToCollectionOrList).
+            </p>
+            <p>
+                2. Function names can be the same if they are wrapped in their own functions.
+            </p>
+            <p>
+                3. Debugging is easier when I journal out what I know about function/program functionality. Then convert journalling into pseudocode, and typing the pseudocode out in clear, numbered steps in the code base. As the steps are met, delete the pseudocode.
+            </p>
+            <p>
+                4. Finding balance between using what seems to be the best technical solution to a problem and what will deliver a working version of the project is challenging.
+            </p>
+        </div>
+        <button type="button" name="challenges" onclick="showChallenges()">Project challenges</button>
+        <div id="challenges">
+            <p>
+                1. Edit functionality on user input. Opted for contentEditable attribute.
+            </p>
+            <p>
+                2. Referencing more than one element of a kind such as ul, form, input. I used ol's instead of two ul's because I couldn't work that out just yet.
+            </p>
+            <p>
+                3. Can template literals be reused through a function?
+            </p>
+            <p>
+                4. How to best organise my styles.css file.
+            </p>
+            <p>
+                5. The deprioritise function, marked by the down arrow icon, breaks as I haven't accounted for the function not including checked todos yet.
+            </p>
+        </div>
+    </div>
+    <!-- // connects JS scripts -->
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+html {
+	height: 100vh;
+	min-width: 600px;
+	background-color: black;
+	opacity: 0.8;
+	background-repeat: no-repeat;
+	background-size: auto;
+}
+
+.container {
+	width: 600px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin: auto;
+	padding-top: 100px;
+	font-family: 'Raleway', sans-serif;
+}
+
+.main {
+	padding: 20px;
+}
+
+form {
+	background-color: #ffffff;
+	padding: 15px;
+	border-radius: 5px;
+	display: flex;
+}
+
+input[type="text"] {
+	height: 30px;
+	outline: 0;
+	border: none;
+	font-size: 1rem;
+	font-family: 'Raleway', sans-serif;
+	color: #595959;
+	flex-grow: 1;
+}
+
+button[name=checkButton]:hover {
+	color: MediumSeaGreen;
+}
+
+button[name=deleteButton]:hover {
+	color: MediumPurple;
+}
+
+button[name=prioritiseButton]:hover {
+	color: HotPink;
+}
+
+button[name=deprioritiseButton]:hover {
+	color: DodgerBlue;
+}
+
+button {
+	font-size: 1.5rem;
+	background-color: #ffffff;
+	outline: 0;
+	border: none;
+	color: #595959;
+}
+
+.todoList {
+	background-color: #ffffff;
+	border-radius: 5px;
+	margin-top: 20px;
+	padding: 10px 25px;
+	height: 100%;
+	overflow-y: auto;
+}
+
+.archivedTodos {
+	background-color: honeydew;
+	border-radius: 5px;
+	margin-top: 20px;
+	padding: 10px 25px;
+	height: 100%;
+	overflow-y: auto;
+	color: #595959;
+}
+
+ul,
+ol {
+	padding-left: 0px;
+	list-style: none;
+}
+
+li {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid lightgrey;
+	padding: 15px 0;
+	font-size: 1rem;
+	color: #595959;
+}
+
+i {
+	pointer-events: none;
+}
+
+.todo-item {
+	flex-grow: 1;
+}
+
+.todo-item-prioritised {
+	background-image: linear-gradient(15deg, white, hotpink);
+}
+
+.todo-item-deprioritised {
+	background-image: linear-gradient(175deg, white, DodgerBlue);
+}
+
+.clearAll {
+	display: flex;
+	justify-content: flex-end;
+	padding: 10px 3px;
+	cursor: pointer;
+	font-size: 0.9rem;
+}
+
+.clearAll:hover {
+	color: lightcoral;
+}
+
+/* transition displaying todo items with timer animation */
+.todo-list-item {
+	transition: all 0.3s ease-out;
+}
+
+/* transition */
+.todo-list-item-fall {
+	transform: translateY(12rem) rotateZ(5deg);
+}
+
+.archived-todo-list-item {
+	display: flex;
+	justify-content: center;
+	background-image: linear-gradient(340deg, white, MediumSeaGreen);
+	margin: 10px;
+	color: #595959;
+	border-radius: 5px;
+	white-space: normal;
+}
+
+#learnings {
+	display: none;
+	background-color: white;
+	margin-top: 20px;
+	padding: 20px;
+	border-radius: 5px;
+	letter-spacing: 0.25ch;
+	font-size: 1rem;
+	font-family: 'Raleway', sans-serif;
+	color: #595959;
+	line-height: 2ch;
+}
+
+#challenges {
+	display: none;
+	background-color: white;
+	margin-top: 20px;
+	padding: 20px;
+	border-radius: 5px;
+	letter-spacing: 0.25ch;
+	font-size: 1rem;
+	font-family: 'Raleway', sans-serif;
+	color: #595959;
+	line-height: 2ch;
+}
+
+button[name=projectLearnings] {
+	font-size: 1.5rem;
+	background-color: transparent;
+	border: 1px solid white;
+	color: white;
+	border-radius: 5px;
+	padding: 0.75rem;
+	margin-top: 20px;
+	margin-right: 5px;
+	font-family: 'Raleway', sans-serif;
+	letter-spacing: 0.2ch;
+}
+
+button[name=projectLearnings]:hover {
+	background-image: linear-gradient(10deg, dodgerblue, mediumpurple);
+	color: white;
+}
+
+button[name=challenges] {
+	font-size: 1.5rem;
+	background-color: transparent;
+	border: 1px solid white;
+	color: white;
+	border-radius: 5px;
+	padding: 0.75rem;
+	margin-top: 20px;
+	margin-right: 5px;
+	font-family: 'Raleway', sans-serif;
+	letter-spacing: 0.1ch;
+}
+
+button[name=challenges]:hover {
+	background-image: linear-gradient(80deg, mediumpurple, hotpink);
+	color: white;
+}
